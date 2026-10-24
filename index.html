@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MARIONET | تعرفه تبلیغات اینستاگرام پیج MARIO_AI</title>
+<meta name="description" content="سفارش تبلیغات استوری، ریلز و پکیج ویژه در پیج اینستاگرام MARIO_AI و ساخت سریال با هوش مصنوعی. انتخاب پکیج، ثبت آیدی تلگرام و پرداخت آنلاین.">
+<meta property="og:title" content="MARIONET | تعرفه تبلیغات پیج MARIO_AI">
+<meta property="og:description" content="تبلیغات شما، در صفحه‌ای که دیده می‌شه…">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#07060a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@400;500;700;800&family=Rubik:ital,wght@1,800;1,900&display=swap">
+<script>document.documentElement.lang='fa';document.documentElement.dir='rtl';</script>
+<style>
+/* Layout: dark neon storefront (Digikala-style header, search, chips, product grid, cart bar) with glowing framed sections from the tariff poster */
+:root{
+  --bg:#07060a;
+  --panel:#0e0b13;
+  --panel-2:#150f1c;
+  --ink:#f6f1f8;
+  --muted:#a89fb6;
+  --line:#2a2234;
+  --red:#ff2438;
+  --pink:#ff3fc8;
+  --violet:#8f5bff;
+  --amber:#ffb020;
+  --ok:#35e08a;
+  --f-display:'Lalezar','Vazirmatn',system-ui,sans-serif;
+  --f-body:'Vazirmatn',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;
+  --f-latin:'Rubik','Arial Black',system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:150px}
+body{
+  background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.7;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:0 110px;
+  background-image:
+    radial-gradient(900px 500px at 85% -5%,rgba(255,36,56,.22),transparent 60%),
+    radial-gradient(800px 500px at 0% 20%,rgba(143,91,255,.18),transparent 60%),
+    radial-gradient(700px 500px at 100% 70%,rgba(255,176,32,.08),transparent 60%);
+  background-attachment:fixed;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:#0a0810}
+button,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+.wrap{max-width:1180px;margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px));background:rgba(10,8,16,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top-row{display:flex;align-items:center;gap:12px;padding-block:10px;max-width:1180px;margin-inline:auto}
+.logo{font-family:var(--f-latin);font-style:italic;font-weight:900;font-size:24px;letter-spacing:.5px;color:var(--red);text-shadow:0 0 18px rgba(255,36,56,.7);direction:ltr;text-decoration:none;white-space:nowrap}
+.logo b{color:#fff;font-weight:900}
+.search{flex:1;min-width:0;display:flex;align-items:center;gap:8px;background:#17121f;border:1px solid var(--line);border-radius:12px;padding:0 12px;height:42px}
+.search:focus-within{border-color:var(--pink);box-shadow:0 0 0 3px rgba(255,63,200,.15)}
+.search input{flex:1;min-width:0;background:none;border:0;outline:0;height:100%}
+.search input::placeholder{color:var(--muted)}
+.cart-btn{position:relative;display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#17121f;border:1px solid var(--line);font-size:22px}
+.cart-btn .n{position:absolute;top:-6px;left:-6px;min-width:20px;height:20px;border-radius:10px;background:var(--red);font-size:11px;font-weight:700;display:grid;place-items:center;padding-inline:5px;box-shadow:0 0 12px rgba(255,36,56,.7)}
+.cart-btn .n[hidden]{display:none}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-block:0 10px;max-width:1180px;margin-inline:auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#120e19;border-radius:20px;padding:4px 14px;color:var(--muted);font-size:13px;text-decoration:none}
+.chip:hover{color:var(--ink);border-color:var(--c,var(--pink))}
+.chip.fire{color:var(--amber);border-color:rgba(255,176,32,.45)}
+
+/* hero */
+.hero{position:relative;text-align:center;padding-block:34px 18px}
+.crown{width:64px;height:auto;margin-inline:auto;display:block;filter:drop-shadow(0 0 14px rgba(255,200,90,.6))}
+.hero h1{margin:6px 0 0;font-family:var(--f-display);font-weight:400;line-height:1.15;font-size:clamp(40px,9vw,84px);background:linear-gradient(180deg,#fff 10%,#cfc8d8 55%,#8d8697 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-wrap:balance;filter:drop-shadow(0 3px 0 rgba(0,0,0,.6))}
+.hero .brand{display:block;font-family:var(--f-latin);font-style:italic;font-weight:900;direction:ltr;font-size:clamp(46px,13vw,118px);line-height:1;color:var(--red);text-shadow:0 0 26px rgba(255,36,56,.65),0 0 60px rgba(255,36,56,.3);letter-spacing:-1px;margin-top:2px}
+.hero p.sub{margin:18px auto 0;font-size:clamp(15px,3.6vw,20px);color:#e6dff0;text-wrap:balance}
+.hero .brush{display:block;width:min(420px,70%);height:4px;margin:10px auto 0;border-radius:4px;background:linear-gradient(90deg,transparent,var(--red) 20%,var(--red) 80%,transparent);box-shadow:0 0 14px var(--red)}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-block:24px 8px}
+.trust div{display:flex;align-items:center;gap:10px;background:rgba(20,15,28,.7);border:1px solid var(--line);border-radius:14px;padding:10px 12px;font-size:13px;line-height:1.5;text-align:start}
+.trust svg{font-size:24px;color:var(--amber)}
+
+/* sections */
+.sec{--c:var(--pink);margin-top:34px}
+.sec[data-cat=reel]{--c:var(--violet)}
+.sec[data-cat=pack]{--c:var(--amber)}
+.sec[data-cat=series]{--c:var(--red)}
+.sec[hidden]{display:none}
+.tab{display:flex;align-items:flex-end;gap:12px;margin-bottom:-1.5px;position:relative;z-index:2;padding-inline-start:18px}
+.tab span.l{display:inline-flex;align-items:center;gap:10px;padding:8px 30px;font-family:var(--f-display);font-size:24px;line-height:1.3;background:#0b0911;border:1.5px solid var(--c);border-bottom:0;border-radius:14px 14px 0 0;transform:skewX(-10deg);box-shadow:0 -6px 24px -6px var(--c)}
+.tab span.l>*{transform:skewX(10deg)}
+.tab svg{font-size:26px;color:var(--c);filter:drop-shadow(0 0 6px var(--c))}
+.tab small{color:var(--muted);font-size:12px;padding-bottom:8px}
+.panel{position:relative;border:1.5px solid var(--c);border-radius:20px;border-start-start-radius:0;padding:22px;background:linear-gradient(160deg,var(--panel-2),var(--panel) 55%);box-shadow:0 0 0 1px rgba(255,255,255,.02) inset,0 0 38px -10px var(--c),0 14px 40px rgba(0,0,0,.5)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+
+.card{position:relative;display:flex;flex-direction:column;gap:6px;min-width:0;background:#0a0810;border:1px solid color-mix(in srgb,var(--c) 55%,#000);border-radius:16px;padding:16px;transition:transform .18s,box-shadow .18s,border-color .18s}
+.card:hover{transform:translateY(-3px);border-color:var(--c);box-shadow:0 10px 30px -12px var(--c)}
+.card.in{border-color:var(--c);box-shadow:0 0 0 1px var(--c),0 0 28px -8px var(--c)}
+.ico{width:50px;height:50px;display:grid;place-items:center;font-size:28px;border-radius:14px;color:var(--c);background:color-mix(in srgb,var(--c) 14%,#0a0810);border:1px solid color-mix(in srgb,var(--c) 50%,#000);filter:drop-shadow(0 0 8px color-mix(in srgb,var(--c) 60%,transparent))}
+.card h3{margin:8px 0 0;font-size:17px;font-weight:800;line-height:1.5}
+.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7;flex:1}
+.badge{position:absolute;top:14px;left:14px;font-size:11px;font-weight:700;padding:2px 10px;border-radius:10px;background:var(--c);color:#12060a}
+.save{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;font-size:12px;color:var(--ok);background:rgba(53,224,138,.1);border:1px solid rgba(53,224,138,.3);border-radius:8px;padding:0 8px}
+.strike{color:var(--muted);text-decoration:line-through;font-size:12px}
+.foot{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-top:10px;padding-top:12px;border-top:1px dashed var(--line);flex-wrap:wrap}
+.price{display:flex;flex-direction:column;line-height:1.3}
+.price b{font-family:var(--f-display);font-weight:400;font-size:30px;color:var(--c);text-shadow:0 0 16px color-mix(in srgb,var(--c) 55%,transparent)}
+.price small{color:var(--muted);font-size:12px}
+.add{display:inline-flex;align-items:center;gap:6px;border:0;border-radius:12px;padding:9px 16px;font-weight:700;color:#10050a;background:var(--c);box-shadow:0 0 18px -2px var(--c)}
+.add:hover{filter:brightness(1.12)}
+.step{display:inline-flex;align-items:center;border:1px solid var(--c);border-radius:12px;overflow:hidden;background:#0a0810}
+.step button{width:36px;height:38px;border:0;background:none;font-size:18px;color:var(--c)}
+.step button:hover{background:color-mix(in srgb,var(--c) 18%,transparent)}
+.step output{min-width:34px;text-align:center;font-weight:700}
+.empty{display:none;text-align:center;color:var(--muted);padding:40px 0}
+.empty.show{display:block}
+
+/* terms */
+.terms{margin-top:34px;border:1px solid var(--line);border-radius:18px;padding:20px 22px;background:rgba(14,11,19,.85)}
+.terms h2{margin:0 0 8px;font-family:var(--f-display);font-weight:400;font-size:24px;display:flex;align-items:center;gap:10px}
+.terms ul{margin:0;padding:0;list-style:none;display:grid;gap:6px}
+.terms li{display:flex;gap:10px;align-items:flex-start;color:#e3dceb}
+.terms li::before{content:"";flex:none;width:9px;height:9px;margin-top:10px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber)}
+.cta{margin-top:22px;display:flex;align-items:center;justify-content:center;gap:12px;border:1.5px solid var(--red);border-radius:16px;padding:14px;color:#fff;text-decoration:none;font-weight:700;background:linear-gradient(90deg,rgba(255,36,56,.16),rgba(255,63,200,.16));box-shadow:0 0 30px -8px var(--red)}
+.cta svg{font-size:22px;color:var(--pink)}
+footer{margin-top:40px;text-align:center;color:var(--muted);font-size:12px;padding-bottom:10px}
+footer .logo{font-size:18px}
+
+/* cart bar */
+.bar{position:fixed;inset:auto 0 0 0;z-index:40;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:rgba(10,8,16,.94);backdrop-filter:blur(14px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s}
+.bar.show{transform:none}
+.bar-in{max-width:1180px;margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bar .t{display:flex;flex-direction:column;line-height:1.35;min-width:0}
+.bar .t small{color:var(--muted);font-size:12px}
+.bar .t b{font-size:18px;font-family:var(--f-display);font-weight:400}
+.go{border:0;border-radius:14px;padding:12px 26px;font-weight:800;color:#fff;background:linear-gradient(90deg,var(--red),var(--pink));box-shadow:0 0 24px -2px rgba(255,36,56,.7)}
+.go:disabled{opacity:.45;box-shadow:none;cursor:not-allowed}
+
+/* checkout sheet */
+.ov{position:fixed;inset:0;z-index:80;background:rgba(3,2,6,.78);display:flex;align-items:flex-end;justify-content:center}
+.ov[hidden]{display:none}
+.sheet{width:min(560px,100%);max-height:94dvh;overflow-y:auto;background:#0d0a13;border:1.5px solid var(--pink);border-bottom:0;border-radius:22px 22px 0 0;box-shadow:0 -10px 60px -10px rgba(255,63,200,.5);padding:18px max(18px,env(safe-area-inset-right,0px)) calc(20px + env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px))}
+@media(min-width:720px){.ov{align-items:center}.sheet{border-bottom:1.5px solid var(--pink);border-radius:22px}}
+.sh-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.sh-head h2{margin:0;font-family:var(--f-display);font-weight:400;font-size:24px}
+.x{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:#17121f;font-size:20px;display:grid;place-items:center}
+.steps{display:flex;gap:6px;margin-block:14px}
+.steps li{flex:1;list-style:none;text-align:center;font-size:12px;color:var(--muted);border-top:3px solid var(--line);padding-top:6px}
+.steps{padding:0}
+.steps li.on{color:var(--ink);border-color:var(--pink);box-shadow:0 -6px 12px -8px var(--pink)}
+.steps li.done{color:var(--ok);border-color:var(--ok)}
+.line{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.line .nm{min-width:0}
+.line .nm b{display:block;font-weight:700}
+.line .nm small{color:var(--muted)}
+.sum{display:flex;justify-content:space-between;align-items:center;margin-top:14px;font-weight:800;font-size:17px}
+.sum span:last-child{font-family:var(--f-display);font-weight:400;font-size:26px;color:var(--amber);text-shadow:0 0 14px rgba(255,176,32,.5)}
+label.f{display:block;margin-top:14px;font-weight:700;font-size:14px}
+.in-box{display:flex;align-items:center;gap:8px;margin-top:6px;background:#17121f;border:1px solid var(--line);border-radius:12px;padding:0 12px}
+.in-box:focus-within{border-color:var(--pink);box-shadow:0 0 0 3px rgba(255,63,200,.15)}
+.in-box input,.in-box textarea{flex:1;min-width:0;background:none;border:0;outline:0;padding:11px 0;color:var(--ink)}
+.in-box.ltr input{direction:ltr;text-align:left}
+.in-box .at{color:var(--pink);font-weight:800;direction:ltr}
+.hint{display:block;margin-top:4px;font-size:12px;color:var(--muted);font-weight:400}
+.err{display:block;margin-top:4px;font-size:12px;color:#ff7a88;font-weight:500}
+.chk{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:13px;color:#d9d1e3}
+.chk input{margin-top:6px;accent-color:var(--pink);width:16px;height:16px}
+.row-btns{display:flex;gap:10px;margin-top:18px}
+.row-btns .go{flex:1}
+.ghost{border:1px solid var(--line);background:#17121f;border-radius:14px;padding:12px 18px;font-weight:700}
+.pay-box{margin-top:14px;border:1px solid var(--line);border-radius:14px;padding:14px;background:#120e19}
+.pay-box h3{margin:0 0 6px;font-size:15px}
+.card-num{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#0a0810;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-top:8px}
+.card-num bdi{font-family:var(--f-latin);font-style:normal;font-weight:800;font-size:19px;letter-spacing:1.5px;direction:ltr}
+.mini{border:1px solid var(--line);background:#1c1626;border-radius:9px;padding:4px 12px;font-size:12px}
+.note{font-size:12px;color:var(--muted);margin-top:8px}
+.tg{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:12px;border-radius:14px;padding:12px;font-weight:800;text-decoration:none;color:#fff;background:linear-gradient(90deg,#1f9bdc,#2b6fe0);box-shadow:0 0 22px -4px #2b8fe0}
+.ordcode{font-family:var(--f-latin);font-style:normal;direction:ltr;display:inline-block;color:var(--amber);font-weight:800}
+.toast{position:fixed;left:50%;bottom:calc(90px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:90;background:#1c1626;border:1px solid var(--pink);border-radius:12px;padding:8px 18px;font-size:13px;box-shadow:0 0 24px -4px var(--pink)}
+.toast[hidden]{display:none}
+
+@media(max-width:760px){
+  .trust{grid-template-columns:1fr 1fr}
+  .panel{padding:16px}
+  .tab span.l{padding:6px 22px;font-size:21px}
+  .tab small{display:none}
+  .logo{font-size:20px}
+}
+@media(max-width:420px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-story" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3"/><circle cx="12" cy="12" r="3.2"/><path d="M9 5.5h6"/></symbol>
+  <symbol id="i-reel" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 9h18M8.5 3l3 6M14.5 3l3 6"/><path d="M10.5 12.8v4.4l3.8-2.2z"/></symbol>
+  <symbol id="i-fire" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.7 7-6.8 0-3-1.8-5-3.4-6.6-.4 1.6-1.3 2.4-2.3 2.8.5-3.2-.9-6.3-3.8-8.4.2 3.3-1.7 5-3.2 6.8C5 11.5 5 13.5 5 15.2 5 19.3 8 22 12 22z"/><path d="M12 22c-1.8 0-3-1.2-3-2.9 0-1.5 1.1-2.4 2-3.6.9 1 3 2 3 3.7 0 1.7-.9 2.8-2 2.8z"/></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M3 11h18M3 7l3-4h4l-3 4M10 7l3-4h4l-3 4M17 7l3-4"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.4l2 11h10.2l2-8H6.2"/><circle cx="9" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L3 10.5l6.5 2.5L12 20z"/><path d="M9.5 13L21 3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M2.5 10h19M6 15h4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 9.5"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></symbol>
+  <symbol id="i-crown" viewBox="0 0 64 44"><path d="M6 36L2 10l16 14L32 4l14 20L62 10l-4 26z" fill="#ffd36e" stroke="#fff3c9" stroke-width="1.5" stroke-linejoin="round" fill-opacity=".14"/><path d="M6 36h52v5H6z" fill="#ffd36e" fill-opacity=".3" stroke="#fff3c9" stroke-width="1.5"/></symbol>
+</svg>
+
+<div dir="rtl" id="app">
+  <header class="top">
+    <div class="top-row">
+      <a class="logo" href="#top" aria-label="MARIONET">MARIO<b>NET</b></a>
+      <label class="search"><svg class="i"><use href="#i-search"/></svg><span class="sr">جستجو</span>
+        <input id="q" type="search" placeholder="جستجو در تعرفه‌ها: استوری، ریلز، سریال…" autocomplete="off"></label>
+      <button class="cart-btn" id="cartBtn" aria-label="سبد خرید"><svg class="i"><use href="#i-cart"/></svg><span class="n" id="cartN" hidden>0</span></button>
+    </div>
+    <nav class="chips" aria-label="دسته‌بندی">
+      <a class="chip" style="--c:var(--pink)" href="#sec-story"><svg class="i"><use href="#i-story"/></svg>استوری</a>
+      <a class="chip" style="--c:var(--violet)" href="#sec-reel"><svg class="i"><use href="#i-reel"/></svg>ریلز</a>
+      <a class="chip fire" href="#sec-pack"><svg class="i"><use href="#i-fire"/></svg>پکیج ویژه</a>
+      <a class="chip" style="--c:var(--red)" href="#sec-series"><svg class="i"><use href="#i-film"/></svg>ساخت سریال با هوش مصنوعی</a>
+      <a class="chip" href="#terms"><svg class="i"><use href="#i-list"/></svg>شرایط</a>
+    </nav>
+  </header>
+
+  <main class="wrap" id="top">
+    <section class="hero">
+      <svg class="crown" viewBox="0 0 64 44" aria-hidden="true"><use href="#i-crown"/></svg>
+      <h1>تعرفه تبلیغات پیج <span class="brand">MARIO_AI</span></h1>
+      <p class="sub">تبلیغات شما، در صفحه‌ای که دیده می‌شه…</p>
+      <span class="brush"></span>
+      <div class="trust">
+        <div><svg class="i"><use href="#i-clock"/></svg>زمان انتشار با هماهنگی قبلی</div>
+        <div><svg class="i"><use href="#i-send"/></svg>هماهنگی و تحویل خروجی در تلگرام</div>
+        <div><svg class="i"><use href="#i-card"/></svg>پرداخت آنلاین یا کارت‌به‌کارت</div>
+        <div><svg class="i"><use href="#i-check"/></svg>همکاری چندتایی با امکان توافق قیمت</div>
+      </div>
+    </section>
+
+    <div id="sections"></div>
+    <p class="empty" id="empty">موردی پیدا نشد. عبارت دیگری را جستجو کنید.</p>
+
+    <section class="terms" id="terms">
+      <h2><svg class="i"><use href="#i-list"/></svg>شرایط</h2>
+      <ul>
+        <li>زمان انتشار با هماهنگی قبلی</li>
+        <li>محتوای تبلیغاتی توسط سفارش‌دهنده ارسال می‌شود</li>
+        <li>تبلیغات نامرتبط یا مغایر با قوانین اینستاگرام پذیرفته نمی‌شود.</li>
+        <li>برای همکاری‌های چندتایی امکان توافق روی قیمت وجود دارد.</li>
+      </ul>
+      <a class="cta" id="tgDirect" href="#" target="_blank" rel="noopener"><svg class="i"><use href="#i-send"/></svg>برای هماهنگی تبلیغات پیام بدهید</a>
+    </section>
+
+    <footer><a class="logo" href="#top">MARIO<b>NET</b></a><br>تبلیغات در پیج MARIO_AI · همهٔ قیمت‌ها به هزار تومان است</footer>
+  </main>
+
+  <div class="bar" id="bar"><div class="bar-in">
+    <div class="t"><small id="barCount">۰ مورد در سبد</small><b id="barTotal">۰ تومان</b></div>
+    <button class="go" id="barGo">ادامه و ثبت سفارش</button>
+  </div></div>
+
+  <div class="ov" id="ov" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="shT">
+      <div class="sh-head"><h2 id="shT">سبد خرید</h2><button class="x" id="shX" aria-label="بستن">✕</button></div>
+      <ol class="steps" id="steps"></ol>
+      <div id="shBody"></div>
+    </div>
+  </div>
+  <div class="toast" id="toast" hidden></div>
+</div>
+
+<script>
+/* ===== تنظیمات فروشگاه: این بخش را با اطلاعات واقعی خودتان پر کنید ===== */
+var CONFIG = {
+  telegramAdmin: 'Gbaggg',      // آیدی تلگرام شما بدون @
+  cardNumber: '6219 8618 6854 6622',      // شماره کارت
+  cardHolder: 'پارسا خراسانی',
+  paymentLink: ''                         // لینک درگاه پرداخت (مثلاً زرین‌لینک). اگر خالی باشد فقط کارت‌به‌کارت نمایش داده می‌شود
+};
+
+var CATS = [
+  {id:'story', title:'استوری', icon:'story', note:'انتشار روی استوری پیج'},
+  {id:'reel', title:'ریلز', icon:'reel', note:'ویدیوی تبلیغاتی روی پیج'},
+  {id:'pack', title:'پکیج ویژه', icon:'fire', note:'ریلز و استوری با هم'},
+  {id:'series', title:'ساخت سریال با هوش مصنوعی', icon:'film', note:'قیمت هر قسمت'}
+];
+var PRODUCTS = [
+  {id:'s1', cat:'story', icon:'story', title:'۱ استوری', desc:'یک استوری تبلیغاتی روی پیج MARIO_AI', price:80, base:80, unit:'استوری'},
+  {id:'s2', cat:'story', icon:'story', title:'۲ استوری', desc:'دو استوری تبلیغاتی با قیمت کمتر از خرید جداگانه', price:150, base:160, unit:'بسته'},
+  {id:'s3', cat:'story', icon:'story', title:'۳ استوری', desc:'سه استوری پشت‌سرهم برای دیده‌شدن بیشتر', price:200, base:240, unit:'بسته', badge:'پرفروش'},
+  {id:'r1', cat:'reel', icon:'reel', title:'۱ ریلز تبلیغاتی', desc:'یک ریلز تبلیغاتی روی پیج MARIO_AI', price:350, base:350, unit:'ریلز'},
+  {id:'r2', cat:'reel', icon:'reel', title:'ریلز + ۱ استوری', desc:'یک ریلز تبلیغاتی همراه با یک استوری', price:400, base:430, unit:'بسته'},
+  {id:'p1', cat:'pack', icon:'fire', title:'۱ ریلز + ۳ استوری', desc:'کامل‌ترین پوشش: یک ریلز و سه استوری', price:500, base:590, unit:'پکیج', badge:'پکیج ویژه'},
+  {id:'a1', cat:'series', icon:'film', title:'ساخت سریال با هوش مصنوعی', desc:'ساخت سریال با هوش مصنوعی. قیمت هر قسمت ۵۰ هزار تومان است؛ تعداد قسمت‌ها را انتخاب کنید.', price:50, base:50, unit:'قسمت', qtyLabel:'قسمت'}
+];
+
+var fa = function(n){ return Number(n).toLocaleString('fa-IR'); };
+var $ = function(s,r){ return (r||document).querySelector(s); };
+var cart = {}; // id -> qty
+var step = 1, tg = '', note = '', agree = false, orderCode = '';
+
+function prod(id){ return PRODUCTS.find(function(p){return p.id===id;}); }
+function totalK(){ return Object.keys(cart).reduce(function(s,id){return s+prod(id).price*cart[id];},0); }
+function count(){ return Object.keys(cart).reduce(function(s,id){return s+cart[id];},0); }
+function money(k){ return fa(k*1000)+' تومان'; }
+function toast(t){ var e=$('#toast'); e.textContent=t; e.hidden=false; clearTimeout(toast.t); toast.t=setTimeout(function(){e.hidden=true;},1800); }
+function tgLink(text){ return 'https://t.me/'+CONFIG.telegramAdmin+(text?'?text='+encodeURIComponent(text):''); }
+
+function footHtml(p){
+  var q = cart[p.id]||0;
+  var saving = p.base>p.price ? '<span class="save">'+fa(p.base-p.price)+' هزار تومان صرفه‌جویی</span>' : '';
+  var btn = q ? '<div class="step"><button data-a="inc" data-id="'+p.id+'" aria-label="افزودن">+</button><output>'+fa(q)+(p.qtyLabel?' '+p.qtyLabel:'')+'</output><button data-a="dec" data-id="'+p.id+'" aria-label="کم کردن">−</button></div>'
+    : '<button class="add" data-a="add" data-id="'+p.id+'"><svg class="i"><use href="#i-cart"/></svg>افزودن به سبد</button>';
+  return saving+'<div class="foot"><div class="price"><span>'+(p.base>p.price?'<span class="strike">'+fa(p.base)+' هزار</span>':'')+'</span><b>'+fa(p.price)+'</b><small>هزار تومان'+(p.qtyLabel?' / هر '+p.qtyLabel:'')+'</small></div>'+btn+'</div>';
+}
+function cardHtml(p){
+  return '<article class="card'+(cart[p.id]?' in':'')+'" id="c-'+p.id+'" data-title="'+p.title+' '+p.desc+'">'
+    +(p.badge?'<span class="badge">'+p.badge+'</span>':'')
+    +'<div class="ico"><svg class="i"><use href="#i-'+p.icon+'"/></svg></div>'
+    +'<h3>'+p.title+'</h3><p>'+p.desc+'</p><div class="ft">'+footHtml(p)+'</div></article>';
+}
+function build(){
+  $('#sections').innerHTML = CATS.map(function(c){
+    var items = PRODUCTS.filter(function(p){return p.cat===c.id;});
+    return '<section class="sec" id="sec-'+c.id+'" data-cat="'+c.id+'"><div class="tab"><span class="l"><svg class="i"><use href="#i-'+c.icon+'"/></svg><span>'+c.title+'</span></span><small>'+c.note+'</small></div>'
+      +'<div class="panel"><div class="grid">'+items.map(cardHtml).join('')+'</div></div></section>';
+  }).join('');
+}
+function refreshCard(id){
+  var p=prod(id), el=$('#c-'+id); if(!el) return;
+  el.classList.toggle('in', !!cart[id]);
+  $('.ft',el).innerHTML = footHtml(p);
+}
+function refreshBar(){
+  var n=count(), t=totalK();
+  $('#cartN').textContent=fa(n); $('#cartN').hidden=!n;
+  $('#bar').classList.toggle('show', n>0);
+  $('#barCount').textContent=fa(n)+' مورد در سبد';
+  $('#barTotal').textContent=money(t);
+}
+function change(id,d){
+  var q=(cart[id]||0)+d;
+  if(q<=0) delete cart[id]; else cart[id]=Math.min(q,99);
+  refreshCard(id); refreshBar();
+  if(!$('#ov').hidden) render();
+}
+
+/* search */
+$('#q').addEventListener('input', function(){
+  var v=this.value.trim(), any=false;
+  document.querySelectorAll('.card').forEach(function(c){
+    var m = !v || c.dataset.title.indexOf(v)>-1; c.hidden=!m;
+  });
+  document.querySelectorAll('.sec').forEach(function(s){
+    var vis = s.querySelectorAll('.card:not([hidden])').length>0; s.hidden=!vis; if(vis) any=true;
+  });
+  $('#empty').classList.toggle('show', !any);
+});
+
+/* checkout */
+var STEPS=['سبد خرید','آیدی تلگرام','پرداخت'];
+function validTg(v){ return /^[A-Za-z][A-Za-z0-9_]{4,31}$/.test(v); }
+function normTg(v){ return v.trim().replace(/^@/,'').replace(/^https?:\/\/t\.me\//i,''); }
+function render(){
+  $('#steps').innerHTML = STEPS.map(function(s,i){
+    return '<li class="'+(i+1===step?'on':i+1<step?'done':'')+'">'+fa(i+1)+'. '+s+'</li>';
+  }).join('');
+  var b=$('#shBody'), ids=Object.keys(cart);
+  if(!ids.length){ b.innerHTML='<p class="note">سبد خرید خالی است. یک پکیج انتخاب کنید.</p><div class="row-btns"><button class="go" data-a="close">انتخاب پکیج</button></div>'; $('#shT').textContent='سبد خرید'; return; }
+  var lines = ids.map(function(id){
+    var p=prod(id);
+    return '<div class="line"><div class="nm"><b>'+p.title+'</b><small>'+fa(p.price)+' هزار تومان'+(p.qtyLabel?' / هر '+p.qtyLabel:'')+'</small></div>'
+      +(step===1?'<div class="step" style="--c:var(--pink)"><button data-a="inc" data-id="'+id+'" aria-label="افزودن">+</button><output>'+fa(cart[id])+'</output><button data-a="dec" data-id="'+id+'" aria-label="کم کردن">−</button></div>':'<b>'+fa(p.price*cart[id])+' هزار</b>')
+      +'</div>';
+  }).join('');
+  var sum='<div class="sum"><span>مبلغ قابل پرداخت</span><span>'+money(totalK())+'</span></div>';
+  if(step===1){
+    $('#shT').textContent='سبد خرید';
+    b.innerHTML = lines+sum+'<div class="row-btns"><button class="ghost" data-a="close">ادامه خرید</button><button class="go" data-a="next">ادامه</button></div>';
+  } else if(step===2){
+    $('#shT').textContent='آیدی تلگرام';
+    b.innerHTML = lines+sum
+     +'<label class="f" for="tgId">آیدی تلگرام شما<span class="hint">خروجی کار یا هماهنگی تبلیغات از طریق همین آیدی انجام می‌شود.</span></label>'
+     +'<div class="in-box ltr"><span class="at">@</span><input id="tgId" inputmode="latin" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="your_id" value="'+tg+'"></div><span class="err" id="tgErr" hidden></span>'
+     +'<label class="f" for="nt">توضیحات سفارش (اختیاری)<span class="hint">مثلاً زمان دلخواه انتشار یا نام پیج و کسب‌وکار.</span></label>'
+     +'<div class="in-box"><textarea id="nt" rows="2" placeholder="توضیحات…">'+note.replace(/</g,'&lt;')+'</textarea></div>'
+     +'<label class="chk"><input type="checkbox" id="ag"'+(agree?' checked':'')+'><span>شرایط را خوانده‌ام: محتوای تبلیغاتی را خودم ارسال می‌کنم و تبلیغات مغایر با قوانین اینستاگرام پذیرفته نمی‌شود.</span></label><span class="err" id="agErr" hidden>برای ادامه باید شرایط را بپذیرید.</span>'
+     +'<div class="row-btns"><button class="ghost" data-a="back">بازگشت</button><button class="go" data-a="pay">ادامه به پرداخت</button></div>';
+  } else {
+    $('#shT').textContent='پرداخت';
+    if(!orderCode) orderCode='MN-'+Math.random().toString(36).slice(2,7).toUpperCase();
+    var orderText = 'سفارش MARIONET ('+orderCode+')\n'+ids.map(function(id){var p=prod(id);return '• '+p.title+' × '+cart[id];}).join('\n')+'\nمبلغ: '+money(totalK())+'\nآیدی تلگرام مشتری: @'+tg+(note?'\nتوضیحات: '+note:'')+'\n(رسید پرداخت پیوست است)';
+    var online = CONFIG.paymentLink ? '<div class="pay-box"><h3>پرداخت آنلاین</h3><p class="note" style="margin:0">با کلیک روی دکمه به درگاه پرداخت منتقل می‌شوید. مبلغ '+money(totalK())+' را وارد کنید.</p><a class="tg" style="background:linear-gradient(90deg,var(--red),var(--pink));box-shadow:0 0 22px -4px var(--red)" href="'+CONFIG.paymentLink+'" target="_blank" rel="noopener"><svg class="i"><use href="#i-card"/></svg>رفتن به درگاه پرداخت</a></div>' : '';
+    b.innerHTML = '<p class="note" style="margin-top:0">کد سفارش شما: <span class="ordcode">'+orderCode+'</span> · تحویل در تلگرام: <span class="ordcode">@'+tg+'</span></p>'+lines+sum+online
+     +'<div class="pay-box"><h3>'+(CONFIG.paymentLink?'یا کارت‌به‌کارت':'پرداخت کارت‌به‌کارت')+'</h3><div class="note" style="margin:0">مبلغ '+money(totalK())+' را به این کارت واریز کنید.</div>'
+     +'<div class="card-num"><bdi id="cn">'+CONFIG.cardNumber+'</bdi><button class="mini" data-a="copy">کپی</button></div><div class="note">به نام: '+CONFIG.cardHolder+'</div></div>'
+     +'<a class="tg" href="'+tgLink(orderText)+'" target="_blank" rel="noopener"><svg class="i"><use href="#i-send"/></svg>ارسال سفارش و رسید در تلگرام</a>'
+     +'<p class="note">بعد از پرداخت، دکمهٔ بالا را بزنید و عکس رسید را همراه پیام بفرستید. کار شما پس از تأیید پرداخت و هماهنگی زمان انتشار انجام می‌شود.</p>'
+     +'<div class="row-btns"><button class="ghost" data-a="back">بازگشت</button></div>';
+  }
+}
+function openSheet(){ if(!count()) return; step=1; $('#ov').hidden=false; render(); document.body.style.overflow='hidden'; }
+function closeSheet(){ $('#ov').hidden=true; document.body.style.overflow=''; }
+
+document.addEventListener('click', function(e){
+  var t=e.target.closest('[data-a]'); if(!t) return;
+  var a=t.dataset.a, id=t.dataset.id;
+  if(a==='add'||a==='inc') change(id,1);
+  else if(a==='dec') change(id,-1);
+  else if(a==='close') closeSheet();
+  else if(a==='next'){ step=2; render(); }
+  else if(a==='back'){ step=step-1; render(); }
+  else if(a==='pay'){
+    var v=normTg($('#tgId').value); tg=v; note=$('#nt').value; agree=$('#ag').checked;
+    var ok=true;
+    $('#tgErr').hidden=true; $('#agErr').hidden=true;
+    if(!validTg(v)){ $('#tgErr').textContent='آیدی تلگرام معتبر نیست. فقط حروف انگلیسی، عدد و _ (حداقل ۵ نویسه).'; $('#tgErr').hidden=false; ok=false; }
+    if(!agree){ $('#agErr').hidden=false; ok=false; }
+    if(ok){ step=3; render(); $('.sheet').scrollTop=0; }
+  }
+  else if(a==='copy'){
+    var txt=CONFIG.cardNumber.replace(/\s/g,'');
+    var done=function(){ toast('شماره کارت کپی شد'); };
+    try{ navigator.clipboard.writeText(txt).then(done,function(){ sel(); }); }catch(_){ sel(); }
+    function sel(){ var r=document.createRange(); r.selectNodeContents($('#cn')); var s=getSelection(); s.removeAllRanges(); s.addRange(r); toast('شماره کارت انتخاب شد'); }
+  }
+});
+$('#cartBtn').addEventListener('click', function(){ if(count()) openSheet(); else toast('سبد خرید خالی است'); });
+$('#barGo').addEventListener('click', openSheet);
+$('#shX').addEventListener('click', closeSheet);
+$('#ov').addEventListener('click', function(e){ if(e.target===this) closeSheet(); });
+document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !$('#ov').hidden) closeSheet(); });
+
+build(); refreshBar();
+$('#tgDirect').href = tgLink('سلام، برای هماهنگی تبلیغات پیام می‌دهم.');
+</script>
+
+</body>
+</html>
